@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Version>1.1.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Behaviours\**" />
+    <Compile Remove="DTOs\**" />
+    <Compile Remove="Features\**" />
+    <Compile Remove="Interfaces\Repositories\**" />
+    <EmbeddedResource Remove="Behaviours\**" />
+    <EmbeddedResource Remove="DTOs\**" />
+    <EmbeddedResource Remove="Features\**" />
+    <EmbeddedResource Remove="Interfaces\Repositories\**" />
+    <None Remove="Behaviours\**" />
+    <None Remove="DTOs\**" />
+    <None Remove="Features\**" />
+    <None Remove="Interfaces\Repositories\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Interfaces\IAccountService.cs" />
+    <Compile Remove="Interfaces\IEmailService.cs" />
+    <Compile Remove="Interfaces\IQueryHandler.cs" />
+    <Compile Remove="Interfaces\IResult.cs" />
+    <Compile Remove="RoadStatus\RoadStatusHandler.cs" />
+    <Compile Remove="RoadStatus\RoadStatusQueryValidator.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.0.1" />
+    <PackageReference Include="FluentValidation" Version="9.1.2" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="9.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="3.1.7" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.7" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="System.Text.Json" Version="4.7.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TFL.Road.Status.Domain\TFLAssessment.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Enums\" />
+  </ItemGroup>
+
+</Project>
