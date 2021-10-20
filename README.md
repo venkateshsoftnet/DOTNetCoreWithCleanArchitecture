@@ -6,7 +6,7 @@ TFL Road Status Coding Challenge
   Visual Studio 2019 IDE
 
 # Build and Run the Repository
-Build any .NET Core project using the .NET Core CLI, which is installed with the [.NET Core SDK](https://dotnet.microsoft.com/download). Then run these commands from the CLI in the directory of this project:<br />
+Build any .NET Core project using the .NET Core CLI, which is installed with the [.NET Core SDK](https://dotnet.microsoft.com/download). Then run these commands from the CLI in the directory of this project (src\TFLAssessment.Console) :<br />
 
 ``dotnet build``<br />
 ``dotnet run``<br />
@@ -16,9 +16,6 @@ These will install any needed dependencies, build the project, and run the proje
 **Other Options** - 
 1) **Buid :** Open the Visual Studio(2019) IDE **Build**  Menu --> **Build solution**
 2) **Run :** Open the command prompt/Powershell from the buid package directlory or publish directory and execute this command(Attached the screenshot below). ``TFLAssessment.Console.exe A1``
-
-**Publish :** Open the Visual Studio(2019) IDE **Build**  Menu --> **Publish RoadStatus** <br />
-&nbsp;&nbsp;&nbsp;&nbsp;Select the path to publish it. Once it is publish to the path, it can be execute from command prompt or powershell tool<br />
 
 **Test Project Execution:** Open the Visual Studio(2019) IDE **Test**  Menu --> Run All Tests<br />
     Once it is executed, Test explorer will show the test results(Executed screenshot added below) 
@@ -30,8 +27,8 @@ a.	APPID and APIKey are stored under appsettings.json in the application
 b.	<img src=".\resources\img\Appsettings.JPG"/>
 
 c.	Change below configuration in the settings file appsettings.json 
-i.	  "AppId": "PLEASE ENTER YOUR APP_ID",
-ii.	  "AppKey": "PLEASE ENTER YOUR APP_KEY",
+i.	  "AppId": "PLEASE ENTER YOUR APP_ID"<br />
+ii.	  "AppKey": "PLEASE ENTER YOUR APP_KEY"
 
 # Additional Details
 
