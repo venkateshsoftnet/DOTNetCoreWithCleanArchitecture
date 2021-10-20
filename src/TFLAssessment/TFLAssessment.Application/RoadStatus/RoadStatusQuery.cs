@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using TFLAssessment.Application.Interfaces;
+using TFLAssessment.Application.Mappings;
 
 namespace TFLAssessment.Application
 {
@@ -14,19 +15,19 @@ namespace TFLAssessment.Application
         public class RoadStatusQueryHandler : IRequestHandler<RoadStatusQuery, List<RoadStatusResponse>>
         {
             private readonly IRoadClient _roadClient;
-            private readonly IMapper _mapper;
+            private readonly IRoadStatusResponseMapper _roadStatusResponseMapper;
 
-            public RoadStatusQueryHandler(IRoadClient roadClient, IMapper mapper)
+            public RoadStatusQueryHandler(IRoadClient roadClient, IRoadStatusResponseMapper roadStatusResponseMapper)
             {
                 _roadClient = roadClient;
-                _mapper = mapper;
+                _roadStatusResponseMapper = roadStatusResponseMapper;
             }
 
             public async Task<List<RoadStatusResponse>> Handle(RoadStatusQuery request, CancellationToken cancellationToken)
             {
                 var roads = await _roadClient.GetRoadStatusAsync(request, cancellationToken);
 
-                var response = _mapper.Map<List<RoadStatusResponse>>(roads);
+                var response = _roadStatusResponseMapper.MapToRoadStatusResponse(roads);
 
                 return response;
             }

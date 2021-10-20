@@ -23,7 +23,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{FED5A605
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TFLAssessment.Application.UnitTests", "tests\TFLAssessment.Application.UnitTests\TFLAssessment.Application.UnitTests.csproj", "{8C5F717D-B546-449C-8363-F76CF0F21B8E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TFLAssessment.Infrastructure.Shared.UnitTests", "tests\TFLAssessment.Infrastructure.UnitTests\TFLAssessment.Infrastructure.Shared.UnitTests.csproj", "{581D4E77-1A35-4569-A811-8B10FB0E7AAB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TFLAssessment.Infrastructure.Shared.UnitTests", "tests\TFLAssessment.Infrastructure.Shared.UnitTests\TFLAssessment.Infrastructure.Shared.UnitTests.csproj", "{581D4E77-1A35-4569-A811-8B10FB0E7AAB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

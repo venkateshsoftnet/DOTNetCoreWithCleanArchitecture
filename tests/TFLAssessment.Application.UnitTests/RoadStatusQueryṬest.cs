@@ -8,6 +8,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using TFLAssessment.Application;
 using TFLAssessment.Application.Interfaces;
+using TFLAssessment.Application.Mappings;
 using TFLAssessment.Domain.Entities;
 using Xunit;
 using static TFLAssessment.Application.RoadStatusQuery;
@@ -17,20 +18,22 @@ namespace TFLAssessment.UnitTests
     public class RoadStatusQueryṬest
     {
         private readonly Mock<IRoadClient> mockRoadClient = new Mock<IRoadClient>();
-        private readonly IMapper mockMapper;
+        private readonly IRoadStatusResponseMapper roadStatusResponseMapper;
+        private readonly IMapper mapper;
 
         public RoadStatusQueryṬest()
         {
             MapperConfiguration configuration = new MapperConfiguration(cfg =>
                     cfg.AddMaps(Assembly.Load("TFLAssessment.Application")));
-            mockMapper = new Mapper(configuration);
+            mapper = new Mapper(configuration);
+            roadStatusResponseMapper = new RoadStatusResponseMapper(mapper);
         }
 
         [Fact]
         public void Constructor_IsValid()
         {
             //act
-            var roadStatusQueryHandler = new RoadStatusQueryHandler(mockRoadClient.Object, mockMapper);
+            var roadStatusQueryHandler = new RoadStatusQueryHandler(mockRoadClient.Object, roadStatusResponseMapper);
 
             //assert
             Assert.NotNull(roadStatusQueryHandler);
@@ -60,7 +63,7 @@ namespace TFLAssessment.UnitTests
             {
                 RoadIds = new List<string> { "A1", "A2" }
             };
-            var roadStatusQueryHandler = new RoadStatusQueryHandler(mockRoadClient.Object, mockMapper);
+            var roadStatusQueryHandler = new RoadStatusQueryHandler(mockRoadClient.Object, roadStatusResponseMapper);
 
             // Act
             var response = await roadStatusQueryHandler.Handle(request, CancellationToken.None);
@@ -80,7 +83,7 @@ namespace TFLAssessment.UnitTests
             mockRoadClient.Setup(result => result.GetRoadStatusAsync(It.IsAny<RoadStatusQuery>(), It.IsAny<CancellationToken>()))
                  .Throws<Exception>();
 
-            var roadStatusQueryHandler = new RoadStatusQueryHandler(mockRoadClient.Object, mockMapper);
+            var roadStatusQueryHandler = new RoadStatusQueryHandler(mockRoadClient.Object, roadStatusResponseMapper);
 
             var request = new RoadStatusQuery
             {

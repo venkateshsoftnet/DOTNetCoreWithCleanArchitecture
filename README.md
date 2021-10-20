@@ -14,35 +14,56 @@ Build any .NET Core project using the .NET Core CLI, which is installed with the
 These will install any needed dependencies, build the project, and run the project respectively.  
 
 **Other Options** - 
+
 1) **Buid :** Open the Visual Studio(2019) IDE **Build**  Menu --> **Build solution**
 2) **Run :** Open the command prompt/Powershell from the buid package directlory or publish directory and execute this command(Attached the screenshot below). ``TFLAssessment.Console.exe A1``
 
-**Test Project Execution:** Open the Visual Studio(2019) IDE **Test**  Menu --> Run All Tests<br />
-    Once it is executed, Test explorer will show the test results(Executed screenshot added below) 
+# Configuring the App ID and API key
 
-**Added Published files in this Ropository to help for executing without build and run.
+a.	APPID and APIKey are stored under appsettings.json in the application (Refer screenshot below)
 
-# Changing App ID and API key
-a.	APPID and APIKey are stored under appsettings.json in the application
-b.	<img src=".\resources\img\Appsettings.JPG"/>
+​	<img src=".\resources\img\Appsettings.JPG"/>
 
-c.	Change below configuration in the settings file appsettings.json 
-i.	  "AppId": "PLEASE ENTER YOUR APP_ID"<br />
-ii.	  "AppKey": "PLEASE ENTER YOUR APP_KEY"
+b.	Change below keys in the appsettings.json file <br />
+* "AppId": "PLEASE ENTER YOUR APP_ID"<br />
+* "AppKey": "PLEASE ENTER YOUR APP_KEY"
 
 # Additional Details
 
-1) Task implemented using clean architecture.
-2) Implemented CQRS and the Mediator pattern.
-3) Logging implemented using serilog.
-4) Unit test written using xUnit.
+1. Task implemented using clean architecture.
 
+2. Implemented CQRS and the Mediator pattern.
 
-# ScreenShots
+3. Logging implemented using serilog. Applications Logs can be found under the logs folder
 
-# Result
+ <img src=".\resources\img\logs.JPG"/>
+
+4. Unit test written using xUnit.
+5. Installed Fine code coverage extension to check the code coverage.
+
 <img src=".\resources\img\OutputConsole.JPG"/>
 
-# Test Case Status
+
+
+# Changing App ID and API key
+
+# Test Project Execution:
+
+Open the Visual Studio(2019) IDE **Test**  Menu --> Run All Tests<br />
+Once it is executed, Test explorer will show the test results(Executed screenshot added below) 
+
+## Test Case Status
+
 <img src=".\resources\img\TestResults.JPG"/>
+
+## Code Coverage (Fine Code Coverage)
+<img src=".\resources\img\CodeCoverage.JPG"/>
+
+
+
+## Areas of  Improvement
+
+* More negative test case
+* Add integration test using spec flow (BDD)
+* Add transforms for application config files for each environment
 

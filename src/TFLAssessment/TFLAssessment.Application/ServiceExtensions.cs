@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
+using TFLAssessment.Application.Mappings;
 
 namespace TFLAssessment.Application
 {
@@ -8,7 +9,8 @@ namespace TFLAssessment.Application
     {
         public static void AddApplicationLayer(this IServiceCollection services)
         {
-            services.AddMediatR(Assembly.GetExecutingAssembly());            
+            services.AddSingleton(typeof(IRoadStatusResponseMapper), typeof(RoadStatusResponseMapper));
+            services.AddMediatR(Assembly.GetExecutingAssembly());       
         }
     }
 }
