@@ -7,19 +7,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{404D2818-917
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{C8B065CF-2A03-4F1E-9653-71EECD6670CB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TFLAssessment.Application", "src\TFL.Road.Status\TFL.Road.Status.Application\TFLAssessment.Application.csproj", "{0A0AAB87-6BF4-4A7D-9A43-83BD1AFBC405}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TFLAssessment.Application", "src\TFLAssessment\TFLAssessment.Application\TFLAssessment.Application.csproj", "{0A0AAB87-6BF4-4A7D-9A43-83BD1AFBC405}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TFLAssessment.Domain", "src\TFL.Road.Status\TFL.Road.Status.Domain\TFLAssessment.Domain.csproj", "{5A9D841B-62F0-4F01-B587-37EF80893E49}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TFLAssessment.Domain", "src\TFLAssessment\TFLAssessment.Domain\TFLAssessment.Domain.csproj", "{5A9D841B-62F0-4F01-B587-37EF80893E49}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{4EEE76BB-D053-4D8C-9006-DCC6C0EF05EA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TFLAssessment.Infrastructure.Shared", "src\TFL.Road.Status\TFL.Road.Status.Infrastructure.Shared\TFLAssessment.Infrastructure.Shared.csproj", "{1AB0AF8B-C089-418B-8AC8-43460A5C1207}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TFLAssessment.Infrastructure.Shared", "src\TFLAssessment\TFLAssessment.Infrastructure.Shared\TFLAssessment.Infrastructure.Shared.csproj", "{1AB0AF8B-C089-418B-8AC8-43460A5C1207}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{47C37955-EB64-4958-9160-26204D68D1AE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TFLAssessment.Console", "src\TFL.Road.Status.Console\TFLAssessment.Console.csproj", "{9ACB3C8C-A54A-49F4-AA5A-260C7148C2DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TFLAssessment.Console", "src\TFLAssessment.Console\TFLAssessment.Console.csproj", "{9ACB3C8C-A54A-49F4-AA5A-260C7148C2DE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{FED5A605-6099-43D5-8E31-DEE091C56097}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TFLAssessment.Application.UnitTests", "tests\TFLAssessment.Application.UnitTests\TFLAssessment.Application.UnitTests.csproj", "{8C5F717D-B546-449C-8363-F76CF0F21B8E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TFLAssessment.Infrastructure.Shared.UnitTests", "tests\TFLAssessment.Infrastructure.UnitTests\TFLAssessment.Infrastructure.Shared.UnitTests.csproj", "{581D4E77-1A35-4569-A811-8B10FB0E7AAB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +47,14 @@ Global
 		{9ACB3C8C-A54A-49F4-AA5A-260C7148C2DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9ACB3C8C-A54A-49F4-AA5A-260C7148C2DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9ACB3C8C-A54A-49F4-AA5A-260C7148C2DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C5F717D-B546-449C-8363-F76CF0F21B8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C5F717D-B546-449C-8363-F76CF0F21B8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C5F717D-B546-449C-8363-F76CF0F21B8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C5F717D-B546-449C-8363-F76CF0F21B8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{581D4E77-1A35-4569-A811-8B10FB0E7AAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{581D4E77-1A35-4569-A811-8B10FB0E7AAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{581D4E77-1A35-4569-A811-8B10FB0E7AAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{581D4E77-1A35-4569-A811-8B10FB0E7AAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +67,8 @@ Global
 		{1AB0AF8B-C089-418B-8AC8-43460A5C1207} = {4EEE76BB-D053-4D8C-9006-DCC6C0EF05EA}
 		{47C37955-EB64-4958-9160-26204D68D1AE} = {404D2818-9176-4FD6-97D7-247060166563}
 		{9ACB3C8C-A54A-49F4-AA5A-260C7148C2DE} = {47C37955-EB64-4958-9160-26204D68D1AE}
+		{8C5F717D-B546-449C-8363-F76CF0F21B8E} = {FED5A605-6099-43D5-8E31-DEE091C56097}
+		{581D4E77-1A35-4569-A811-8B10FB0E7AAB} = {FED5A605-6099-43D5-8E31-DEE091C56097}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9DEFC3C3-B704-4D04-9571-998C608FC770}
