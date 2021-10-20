@@ -2,7 +2,7 @@
   "profiles": {
     "TFL.Road.Status.Console": {
       "commandName": "Project",
-      "commandLineArgs": "A1 A2"
+      "commandLineArgs": "A1"
     }
   }
 }
